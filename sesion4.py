@@ -4,7 +4,7 @@
 # Sesión 4 - Crea tu propio filtro
 # -------------------------------------------------------------------------
 # Importar bibliotecas que se utilizarán - no modifiques esta sección
-from imagenes import imshow
+from imagenes import imshow, noise
 import cv2
 import numpy as np
 
@@ -23,6 +23,9 @@ while True:
 
     grises = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     imshow('GRISES', grises)
+
+    ruido = noise(frame)
+    imshow('Imagen Ruido', ruido)
 
 
 
