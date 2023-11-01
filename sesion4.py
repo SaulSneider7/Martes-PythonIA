@@ -19,8 +19,7 @@ while True:
     if not ret:
         break
 
-
-    if cv2.waitKey(1) & 0xFF == ('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 
