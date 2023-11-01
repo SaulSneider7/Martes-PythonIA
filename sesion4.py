@@ -27,7 +27,10 @@ while True:
     ruido = noise(frame)
     imshow('Imagen Ruido', ruido)
 
-
+    contraste = 2.1
+    brillo =  20
+    nuevo = cv2.convertScaleAbs(frame,  alpha=contraste, beta=brillo)
+    imshow('Nueva imagen', nuevo)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
