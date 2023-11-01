@@ -15,9 +15,16 @@ cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 while True:
     ret, frame = cap.read()
-    cv2.imshow('TITULO', frame)
+
     if not ret:
         break
+
+    cv2.imshow('TITULO', frame)
+
+    grises = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    imshow('GRISES', grises)
+
+
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
