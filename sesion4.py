@@ -11,6 +11,10 @@ import numpy as np
 # -------------------------------------------------------------------------
 # Escribe tu código aquí:
 
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+ret, frame = cap.read()
+cv2.imshow('TITULO', frame)
+
 
 
 
