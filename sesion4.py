@@ -12,11 +12,16 @@ import numpy as np
 # Escribe tu código aquí:
 
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
-ret, frame = cap.read()
-cv2.imshow('TITULO', frame)
 
-#este es un comentario de prueba
+while True:
+    ret, frame = cap.read()
+    cv2.imshow('TITULO', frame)
+    if not ret:
+        break
 
+
+    if cv2.waitKey(1) & 0xFF == ('q'):
+        break
 
 
 
@@ -25,5 +30,5 @@ cv2.imshow('TITULO', frame)
 # Deja siempre este código hasta el final del archivo - no lo borres
 # Este código sirve para mantener las ventas abiertas y
 # cerrarlas cuando se presiona una tecla
-cv2.waitKey(0)
+
 cv2.destroyAllWindows()
